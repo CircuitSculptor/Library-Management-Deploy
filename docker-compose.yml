@@ -1,4 +1,13 @@
 services:
+
+  user-service:
+    image: ghcr.io/meeeiiike/user-service/app:latest
+    env_file: ./.env
+    ports:
+      - "8080:8080" #8083:8081
+    networks:
+      - labnet
+      -
   book-service:
     image: ghcr.io/meeeiiike/book-service/app:latest
     env_file: ./.env
@@ -8,7 +17,7 @@ services:
       - labnet
 
   loans-service:
-    image: ghcr.io/meeeiiike/loans-service/app:latest
+    image: ghcr.io/meeeiiike/loan-service/app:latest
     env_file: ./.env
     depends_on:
       - notification-service
@@ -18,19 +27,11 @@ services:
     networks:
       - labnet
 
-  user-service:
-    image: ghcr.io/meeeiiike/user-service/app:latest
-    env_file: ./.env
-    ports:
-      - "8083:8081"
-    networks:
-      - labnet
-
   notification-service:
     image: ghcr.io/meeeiiike/notification-service/app:latest
     env_file: ./.env
     ports:
-      - "8084:8081"
+      - "8083:8083" #8084:8081
     networks:
       - labnet
 

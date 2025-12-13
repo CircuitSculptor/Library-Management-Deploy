@@ -7,7 +7,7 @@ services:
       - "8080:8080" #8083:8081
     networks:
       - labnet
-      -
+
   book-service:
     image: ghcr.io/meeeiiike/book-service/app:latest
     env_file: ./.env

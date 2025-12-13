@@ -4,7 +4,8 @@ services:
     image: ghcr.io/meeeiiike/user-service/app:latest
     env_file: ./.env
     depends_on:
-      - user-db
+      user-db:
+        condition: service_healthy
     ports:
       - "8080:8080" #8083:8081
     networks:
@@ -18,9 +19,13 @@ services:
       - "5433:5432"
     volumes:
       - user-postgres-data:/var/lib/postgresql/data
-    restart: unless-stopped
     networks:
       - labnet
+    restart: unless-stopped
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U $DB_USER -d $DB_NAME" ]
+      interval: 5s
+      retries: 5
 
   ###########################################################
 

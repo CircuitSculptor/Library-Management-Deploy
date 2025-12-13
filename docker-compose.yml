@@ -3,10 +3,26 @@ services:
   user-service:
     image: ghcr.io/meeeiiike/user-service/app:latest
     env_file: ./.env
+    depends_on:
+      - user-db
     ports:
       - "8080:8080" #8083:8081
     networks:
       - labnet
+    restart: unless-stopped
+
+  user-db:
+    image: postgres:17-alpine
+    env_file: ./.env
+    ports:
+      - "5433:5432"
+    volumes:
+      - user-postgres-data:/var/lib/postgresql/data
+    restart: unless-stopped
+    networks:
+      - labnet
+
+  ###########################################################
 
   book-service:
     image: ghcr.io/meeeiiike/book-service/app:latest
@@ -34,6 +50,9 @@ services:
       - "8083:8083" #8084:8081
     networks:
       - labnet
+
+volumes:
+  user-postgres-data:
 
 networks:
   labnet:

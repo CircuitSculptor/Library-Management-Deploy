@@ -1,16 +1,61 @@
-You need Docker Desktop installed first!
+## Library Management System
 
-then clone this deploy repo (Library-Management-Deploy) and make sure you're in the directory. 
-once done you can run "docker compose up --build" which will pull everything you need to get started.
+As a group, we have created a multi-service application that uses Java Programming, Spring Boot, JPA, PostgreSQL and Docker Compose.
 
-all services should now be running! you can check endpoints with swagger and use the provided funtionality 
+This is the Deploy Repository for our group project. Their are 4 microservices in our project. 
 
-http://localhost:8080/swagger-ui/index.html 
+The GitHub repositories can be viewed below:
 
-http://localhost:8081/swagger-ui/index.html 
+* User Service: https://github.com/meeeiiike/user-service 
+* Book Service: https://github.com/meeeiiike/book-service
+* Loans Service: https://github.com/meeeiiike/loan-service
+* Notification Service: https://github.com/meeeiiike/notification-service
 
-http://localhost:8082/swagger-ui/index.html 
+## Project Setup
 
-http://localhost:8083/swagger-ui/index.html
+First you need to install Docker Desktop on your computer by following this link to their download page: (Docker Desktop is free) https://www.docker.com/products/docker-desktop/
 
-#NOTE any long id values must be removed from request bodies as id's are auto incremented
+Docker does not have to be open for the following steps to work although it will show more details about the microservices.
+
+With that done, you need to open a new Terminal window. You can navigate to it manually or press Win+X then I in Windows, Ctrl+Alt+T in Linux and Command+Space and type Terminal on MacOS.
+
+Enter the following and press Enter
+```bash
+git clone https://github.com/CircuitSculptor/Library-Management-Deploy.git
+```
+You have now cloned the Deploy Repository.
+
+Next you have to go into the directory where the cloned files are. Enter this command.
+```bash
+cd Library-Management-Deploy
+```
+Optionally you can enter ```ls``` to see all the files wthin this directory.
+
+Now you are one command away from running our project. Enter this final command.
+```bash
+docker compose up --build
+```
+This command will begin to pull down our project onto your computer and start automatically. It will show the 4 microservices starting up.
+
+## How to use our project
+
+Below are 4 links to each microservice that you have just launched.
+
+* User Service: http://localhost:8080/swagger-ui/index.html 
+* Book Service: http://localhost:8081/swagger-ui/index.html 
+* Loans Service: http://localhost:8082/swagger-ui/index.html 
+* Notification Service: http://localhost:8083/swagger-ui/index.html
+
+You can fill in some details in the User Service or the Book Service.
+
+NOTE: Any long ID values must be removed from the request bodies as ID's are auto incremented by the database
+
+All services are running and you can check all the endpoints with Swagger and use the provided functionality.
+
+___
+
+### Project Contributors
+* https://github.com/CircuitSculptor
+* https://github.com/meeeiiike
+* https://github.com/FirstGit178
+* https://github.com/KucukBalik

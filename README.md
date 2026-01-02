@@ -31,7 +31,7 @@ Next you have to go into the directory where the cloned files are. Run the follo
 ```bash
 cd Library-Management-Deploy
 ```
-Optionally you can enter `ls` to see all the files within this directory and `cat README.md` to view this in the Terminal.
+Optionally you can enter `ls` to see all the files within this directory and use `cat README.md` to view this Readme in the Terminal.
 
 Now you are one command away from running our project. Run the following command.
 ```bash

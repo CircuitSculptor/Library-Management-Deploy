@@ -15,13 +15,13 @@ The GitHub repositories can be viewed below:
 
 First you need to install Docker Desktop on your computer by following this link to their download page: 
 
-(Docker Desktop is free) https://www.docker.com/products/docker-desktop/
+(Docker Desktop is free software) https://www.docker.com/products/docker-desktop/
 
 Docker Desktop does not have to be open for the following steps to work although it will show more details about the microservices.
 
 You will also need to install Git. Follow this link and select your OS and follow their installation instructions. 
 
-https://git-scm.com/install/
+(Git is free software) https://git-scm.com/install/
 
 With that done, you need to open a new Terminal window. You can navigate to it manually or press Win+X then I in Windows, Ctrl+Alt+T in Linux and Command+Space and type Terminal on MacOS.
 

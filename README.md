@@ -13,13 +13,15 @@ The GitHub repositories can be viewed below:
 
 ## Project Setup
 
-First you need to install Docker Desktop on your computer by following this link to their download page: (Docker Desktop is free) https://www.docker.com/products/docker-desktop/
+First you need to install Docker Desktop on your computer by following this link to their download page: 
+
+(Docker Desktop is free) https://www.docker.com/products/docker-desktop/
 
 Docker Desktop does not have to be open for the following steps to work although it will show more details about the microservices.
 
 With that done, you need to open a new Terminal window. You can navigate to it manually or press Win+X then I in Windows, Ctrl+Alt+T in Linux and Command+Space and type Terminal on MacOS.
 
-Run the following command.
+Run the following command to clone our deploy repository to get started.
 ```bash
 git clone https://github.com/CircuitSculptor/Library-Management-Deploy.git
 ```
